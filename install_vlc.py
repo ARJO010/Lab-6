@@ -66,10 +66,11 @@ def installer_ok(installer_data, expected_sha256):
         bool: True if SHA-256 of VLC installer matches expected SHA-256. False if not.
     """    
     # TODO: Step 3
-    sha_256 = hashlib.sha256(installer_data).hexdigest()
+    sha256_hash = hashlib.sha256(installer_data).hexdigest() 
+    if sha256_hash == expected_sha256:
 
     # Hint: See example code in lab instructions entitled "Computing the Hash Value of a Response Message Body"
-    return sha_256 == expected_sha256
+      return expected_sha256
 
 def save_installer(installer_data):
     """Saves the VLC installer to a local directory.
