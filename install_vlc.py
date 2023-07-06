@@ -96,7 +96,7 @@ def run_installer(installer_path):
         installer_path (str): Full path of the VLC installer file
     """    
     # TODO: Step 5
-    installer_path = r'C:\temp\vlc-3.0.17.4'
+    installer_path = r'C:\temp\vlc-3.0.17.4-win64.exe'
     subprocess.run([installer_path, '/L=1033', '/S'])
     # Hint: See example code in lab instructions entitled "Running the VLC Installer"
     return
